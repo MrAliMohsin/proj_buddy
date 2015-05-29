@@ -66,6 +66,21 @@
             
 </form > 
 
+<!--<%= Html.ValidationSummary("Sign In was unsuccessful. Try again !!") %>
+<% using (Html.BeginForm("validation","SignIn")){%>
+<p>
+    <label for="Email">Email:</label>
+    <%= Html.TextBox("email") %>
+    <%= Html.ValidationMessage("Email", "*") %>
+</p>
+
+<p>
+    <label for="Password">Password:</label>
+    <%= Html.Password("Password") %>
+    <%= Html.ValidationMessage("password", "*") %>
+</p>
+<input type="submit" class="btn" name="submit" value="Sign In" /> 
+<%}%>-->
 <table align="center" >
     <tr>
         <td>

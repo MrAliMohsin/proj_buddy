@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Project_Buddy.Models.Group
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "AddMember";
 }
@@ -42,26 +43,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/AddMember/AddMember">Add Member</a>
+                    <a href="/AddMember/AddMember?gId=@Model.group_id">Add Member</a>
                 </li>
                 <li>
-                    <a href="#">Delete Member</a>
+                    <a href="/DeleteMember/DeleteMember?gId=@Model.group_id">Delete Member</a>
                 </li>
                 <li>
-                    <a href="/DeleteGroup/DeleteGroup">Delete Group</a>
+                    <a href="/ViewMembers/ViewMembers?gId=@Model.group_id">View Members</a>
                 </li>
                 <li>
-                    <a href="#">Progress</a>
+                    <a href="#">Upload File</a>
                 </li>
-                <li>
-                    <a href="#">Call</a>
-                </li>
-                <li>
-                    <a href="#">Chat</a>
-                </li>
-                <li>
-                    <a href="#">Find</a>
-                </li>
+                
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -76,14 +69,14 @@
                         <h1 style="color:Black">Project Buddy</h1>
                         <h2 style="color:lightblue; font-size:14pt">Add Member</h2>
 
-                        <form id="form" name="form" action="/AddMember/SearchMember" method="post">
+                        <form id="form" name="form" action="/AddMember/Add?gId=@Model.group_id" method="post">
                             <br><br><br>
                             <div style="margin-top:5%; margin-left:15%" id="block">
 
-                                <span style="color:gray; font-size:14pt">Search Member:</span><input type="text" name="addmember" id="addmember" placeholder="Member's Name" required />
+                                <span style="color:gray; font-size:14pt">User's Email::</span><input style="color:black" type="text" name="addmember" id="addmember" placeholder="Member's Email" required />
                                 <label id="search" for="search"></label>
                                 <br /><br />
-                                <input type="submit" id="SearchMember" style="margin-left:11%;" class="btnnormal" name="SearchMember" value="SearchMember" />
+                                <input type="submit" id="SearchMember" style="margin-left:11%;" class="btnnormal" name="SearchMember" value="Add Member" />
 
                             </div>
                         </form>
@@ -94,6 +87,7 @@
         </div>
         <!-- /#page-content-wrapper -->
     </div>
+    
     <a href="#menu-toggle" class="btn btndefault" id="menu-toggle">Toggle Menu</a>
     <!-- /#wrapper -->
     <!-- jQuery -->

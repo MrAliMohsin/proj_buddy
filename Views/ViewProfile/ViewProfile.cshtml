@@ -1,0 +1,18 @@
+﻿@model Project_Buddy.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ViewProfile";
+}
+<div style="margin-left:50%">
+    <h1><span style="left:40px;color:lightgray">@Model.name</span></h1>
+    <br />
+    <h2 style="color:lightblue">Email: <span style="left: 40px; color: lightgray">@Model.email</span></h2>
+    <br />
+    <h2 style="color:lightblue">Mobile Number: <span style="left: 40px; color: lightgray">@Model.mobileNo</span></h2>
+    <br />
+    <h2 style="color:lightblue">Country: <span style="left: 40px; color: lightgray">@Model.country</span></h2>
+    <br />
+    <h2 style="color:lightblue">City: <span style="left: 40px; color: lightgray">@Model.city</span></h2>
+ </div>
+
+

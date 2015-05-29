@@ -1,0 +1,27 @@
+﻿@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>heah</title>
+    <script>
+        $(document).ready(function () {
+            var s = $('#text').val();
+            $('#b1').click(function(){
+                $.getJSON("/Search/Search2?text=" + s, function (x) {
+                    
+                        $('p').text(x.s);
+                    
+                    
+                });
+            });
+
+        });
+
+    </script>
+</head>
+
+<input type="text" id="text" />
+<button id="b1">Button</button>
+<p style="color:black"></p>

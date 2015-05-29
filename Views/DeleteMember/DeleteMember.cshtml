@@ -1,13 +1,15 @@
 ﻿@model Project_Buddy.Models.Group
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "GroupView";
+    ViewBag.Title = "Delete Member";
 }
+
 <!DOCTYPE html>
 <style>
     body {
-        background-image:none;
-    background-color:white}
+        background-image: none;
+        background-color: white;
+    }
 </style>
 <html lang="en">
 <head>
@@ -22,15 +24,15 @@
     <!-- Custom CSS -->
     <link href="~/css/simple-sidebar.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
- 
-    
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
 </head>
 
 <body>
-    
+
     <div id="wrapper" style="color:white">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -50,33 +52,42 @@
                     <a href="/ViewMembers/ViewMembers?gId=@Model.group_id">View Members</a>
                 </li>
                 <li>
-                    <a href="/MyFiles/MyFiles?gId=@Model.group_id">My Files</a>
-                </li>
-                <li>
                     <a href="#">Upload File</a>
                 </li>
+
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        
-                            
-                        
-                        <h1 style="color:black">@ViewBag.groupname</h1>
-                        <h4 style="color:lightblue">@ViewBag.visibility</h4>
-                        
-                        
+
+                        <!-- Add Member html interface -->
+                        <h1 style="color:Black">Project Buddy</h1>
+                        <h2 style="color:lightblue; font-size:14pt">Add Member</h2>
+
+                        <form id="form" name="form" action="/DeleteMember/Delete?gId=@Model.group_id" method="post">
+                            <br><br><br>
+                            <div style="margin-top:5%; margin-left:15%" id="block">
+
+                                <span style="color:gray; font-size:14pt">Member's Email::</span><input style="color:black" type="text" name="deletemember" id="deletemember" placeholder="Member's Email" required />
+                                <label id="search" for="search"></label>
+                                <br /><br />
+                                <input type="submit" id="SearchMember" style="margin-left:11%;" class="btnnormal" name="SearchMember" value="Delete Member" />
+
+                            </div>
+                        </form>
+                        <!-- Add Member html interface ends-->
                     </div>
                 </div>
-            </div>34erwfds zvtyu7oi;l/.
+            </div>
         </div>
         <!-- /#page-content-wrapper -->
     </div>
+
     <a href="#menu-toggle" class="btn btndefault" id="menu-toggle">Toggle Menu</a>
     <!-- /#wrapper -->
     <!-- jQuery -->
@@ -92,3 +103,4 @@
     </script>
 </body>
 </html>
+

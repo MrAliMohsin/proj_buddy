@@ -6,8 +6,9 @@
 <!DOCTYPE html>
 <style>
     body {
-        background-image:none;
-    background-color:white}
+        background-image: none;
+        background-color: white;
+    }
 </style>
 <html lang="en">
 <head>
@@ -22,15 +23,15 @@
     <!-- Custom CSS -->
     <link href="~/css/simple-sidebar.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
- 
-    
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
 </head>
 
 <body>
-    
+
     <div id="wrapper" style="color:white">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -50,9 +51,6 @@
                     <a href="/ViewMembers/ViewMembers?gId=@Model.group_id">View Members</a>
                 </li>
                 <li>
-                    <a href="/MyFiles/MyFiles?gId=@Model.group_id">My Files</a>
-                </li>
-                <li>
                     <a href="#">Upload File</a>
                 </li>
             </ul>
@@ -60,17 +58,18 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        
-                            
-                        
-                        <h1 style="color:black">@ViewBag.groupname</h1>
-                        <h4 style="color:lightblue">@ViewBag.visibility</h4>
-                        
-                        
+
+
+
+                        <h1 style="color:black">@Model.group_name</h1>
+                        <h4 style="color:lightblue">@Model.visibility</h4>
+                        <div style="top:30px; color:black" >@ViewBag.x</div>
+
+
                     </div>
                 </div>
             </div>34erwfds zvtyu7oi;l/.
